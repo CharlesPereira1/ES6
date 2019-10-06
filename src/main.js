@@ -25,19 +25,19 @@ class App {
             return;
         
         //caminho na url
-        const response = await api.get(`/users/${repoInput}`);        
-        //const response = await api.get(`/repos/${repoInput}`);
+        //const response = await api.get(`/users/${repoInput}`);        
+        const response = await api.get(`/repos/${repoInput}`);
         
         console.log(response);
 
-        /*const { name, description, html_url, owner: { avatar_url } } = response.data;
+        const { name, description, html_url, owner: { avatar_url } } = response.data;
 
         this.repositories.push({
             name,
             description,
             avatar_url,
             html_url,
-        })*/
+        })
 
         this.render(); 
     }
